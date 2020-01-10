@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor = 'let r of restaurantList?.restaurants'>
+    <ion-card-header>
+      <ion-card-title>{{r.restaurant.name}}</ion-card-title>
+      <ion-img [src]="r.restaurant.thumb"></ion-img>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{r.restaurant.location.address}} <br />
+      {{r.restaurant.cuisines}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
